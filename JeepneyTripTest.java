@@ -29,7 +29,11 @@ public class JeepneyTripTest extends TestCase {
   
   public void testChangeDiscount() {
     JeepneyTrip t = new JeepneyTrip(5, 1, 1);
+    JeepneyTrip t1 = new JeepneyTrip(5,2,1); 
+    JeepneyTrip t2 = new JeepneyTrip(10,5,1);
     
     assertEquals(4.0, t.fareChange(10));
+    assertEquals(7.0,t1.fareChange(20));
+    assertEquals(3.5,t2.fareChange(50));
   }
 }
